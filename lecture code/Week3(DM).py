@@ -38,17 +38,70 @@ Popcorn Bucket $30
 
 #Example Problem 
 """ 
-Adam is running a half marathon. His avg. mile time is 6:00. 
+Adam is running a half marathon. His avg. mile time is 5:55. 
 For the half (13.1), what is his projected finish time?
 Output result in Time: hr:min:sec
 """
 
-avg_mile_time = 6.00
-half_length = 13.1
-avg_half_time_hr = (avg_mile_time * half_length) // 60
-avg_half_time_min = round((avg_mile_time * half_length) - 60)
-avg_half_time_sec =  round((avg_mile_time * half_length) - 78)
-print("Time:",avg_half_time_hr,":",avg_half_time_min, ":",avg_half_time_sec)
+minutes = 5
+sec = 55
+pace_secs = sec + (minutes * 60)
 
+total_half_sec = pace_secs * 13.1 
 
+projected_hrs = total_half_sec // 3600 
+projected_min = (total_half_sec % 3600) // 60
+projected_secs = (total_half_sec % 3600) % 60
+print("Time:", int(projected_hrs), ":", int(projected_min),":", projected_secs)
 
+# Dynamic Types
+# x = 1 
+# x = " Aggie Basketball"
+# x = True
+
+# print(type(x))
+# Input
+#age = int(input("Please enter your age: "))
+#print("On your next brithday you will be", int(age) + 1)
+
+# Casting
+#int()
+#str() 
+#float() 
+#bool()
+#eval() # trying to figure out the best type
+
+# If
+#age = 12 
+#if age > 19: 
+#    print("The best years of your life.")
+#if age >= 13:
+#    print("You are a teenager. Have Fun :)")
+#if age < 13:
+#    print("You are still a child :)")
+
+#if age >= 18:
+#    print("Adult")
+#elif age >= 13:
+#    print("teenager") 
+#else:
+#    print("child")
+
+# If - Hurd Premium EX
+#student = input("Are you a Student at USU: (Y/N)")
+#hurdP = input("Do you have Hurd Premium: (Y/N)")
+
+#if student == "Y":
+#    print("You get into the game for free!")
+#if hurdP == "Y"
+#  print("You get into the game 15 minutes early!")
+#else: 
+#    print("Buy a ticket. They are not to expensive!")
+# Min, Max, Range
+
+#grades = [89, 56, 100, 100, 90, 0, 5]
+
+#print("min:", min(grades))
+#print("max:", max(grades))
+
+#print(range(1,10))
