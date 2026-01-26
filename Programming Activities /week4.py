@@ -3,8 +3,7 @@ Programming Activity 1
 Write a program that asks the user the year they were born. Display a message telling the user what generation they belong to based on the following rules/years:
  - Gen Beta - Everything greater then 2025 
  - Gen Alpha 2025
- - Gen Z 2012
- - Zoomer 1997
+ - Gen Z 2010
  - Millennial 1981
  - Gen X 1965
  - Baby Boomer 1946
@@ -14,16 +13,16 @@ year_born = 0000
 year_born = int(input("What year were you born in: "))
 
 if year_born <= 1946:
-    print("You are a Baby Boomer!")
+    print("You are a Silent Generation!")
 elif year_born > 1946 and year_born <= 1965: 
-    print("You are Gen X!")
+    print("You are Baby Boomer!")
 elif year_born > 1965 and year_born <= 1981: 
-    print("You are a Millennial!")
+    print("You are a Gen X!")
 elif year_born > 1981 and year_born <= 1997: 
-    print("You are a Zoomer!")
-elif year_born > 1997 and year_born <= 2012: 
+    print("You are a Millennial!")
+elif year_born > 1997 and year_born <= 2010: 
     print("You are Gen Z!")
-elif year_born > 2012 and year_born <= 2025: 
+elif year_born > 2010 and year_born <= 2025: 
     print("You are Gen Alpha!")
 else: 
     print("You are Gen Beta!")
