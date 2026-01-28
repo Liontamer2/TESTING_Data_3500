@@ -46,3 +46,21 @@ while age != 0:
 else:
     print("You were born in", current_year)
 
+"""
+Programming Activity 3
+Write a program that prints all the multiples of 5, from 5 to 95 using a for loop. 
+"""
+for i in range(1, 96):
+    if i % 5 == 0:
+        print(i)
+
+"""
+Programming Activity 4
+Write a program that prints all the multiples of 5, from 5 to 95 using a while loop.
+"""
+
+num = 1
+while num < 96:
+    if num % 5 == 0:
+        print(num)
+    num += 1
