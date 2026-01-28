@@ -50,17 +50,46 @@ else:
 Programming Activity 3
 Write a program that prints all the multiples of 5, from 5 to 95 using a for loop. 
 """
-for i in range(1, 96):
-    if i % 5 == 0:
-        print(i)
+for i in range(5, 100,5):
+    print("i:", i)
 
 """
 Programming Activity 4
 Write a program that prints all the multiples of 5, from 5 to 95 using a while loop.
 """
 
-num = 1
+num = 5
 while num < 96:
     if num % 5 == 0:
-        print(num)
-    num += 1
+        print("num:", num)
+    num += 5
+
+"""
+Write in pseudocode and then in Python a program that simulates a guessing game. The program should randomly choose a number between 1 and 100. The user must guess the number, and the program will tell the user if their guess is too high, too low, or correct. The game should continue until the user guesses the correct number or chooses to quit. The program should also keep track of how many guesses the user made.
+"""
+import random
+number = random.randint(1,100)
+solved = True
+guess_counter = 0
+while solved == True:
+    try:
+        guess = int(input("Guess the secret number: "))
+        if guess < number:
+           print("Your guess is low. Guess Again")
+           guess_counter += 1
+        elif guess > number:
+           print("Your guess is high. Guess again")
+           guess_counter += 1
+        else:
+            guess_counter += 1
+            print("You got it correct!")
+            print("It took you", guess_counter, "guesses.")
+            solved == False
+            break  
+    except ValueError:
+        print("Invalid input. Please enter a whole number.")
+
+"""
+1. Find all the prime numbers within a given range using a for loop
+2. Write a Python program to reverse a given three or more digit integer WITHOUT using lists (hint, use // and % to isolate numbers)
+"""
